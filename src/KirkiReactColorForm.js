@@ -17,11 +17,12 @@ const KirkiReactColorForm = ( props ) => {
 		wp.customize.control( props.customizerSetting.id ).setting.set( color.hex );
 	};
 
-	switch ( props.formComponent ) {
+	switch ( props.choices.formComponent ) {
 		case 'AlphaPicker':
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<AlphaPicker
 						{ ...props.choices }
@@ -34,6 +35,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<BlockPicker
 						width="300"
@@ -47,6 +49,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<ChromePicker
 						width="300"
@@ -60,6 +63,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<CirclePicker
 						width="300"
@@ -73,6 +77,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<CompactPicker
 						width="300"
@@ -86,6 +91,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<GithubPicker
 						width="300"
@@ -99,6 +105,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<HuePicker
 						width="300"
@@ -112,6 +119,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<MaterialPicker
 						width="300"
@@ -125,6 +133,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<PhotoshopPicker
 						width="300"
@@ -138,6 +147,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<SketchPicker
 						width="300"
@@ -151,6 +161,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<SliderPicker
 						width="300"
@@ -164,6 +175,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<SwatchesPicker
 						width="300"
@@ -177,6 +189,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					<label className="customize-control-title">{ props.label }</label>
+					<span class="description customize-control-description">{ props.description }</span>
 					<div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>
 					<TwitterPicker
 						width="300"
