@@ -61,6 +61,8 @@ const KirkiReactColorControl = wp.customize.Control.extend({
 		const value = control.setting.get();
 
 		const form = <KirkiReactColorForm
+			formComponent={ control.params.choices.formComponent }
+			choices={ control.params.choices }
 			label={ control.params.label }
 			value={ value }
 			setNotificationContainer={ control.setNotificationContainer }
