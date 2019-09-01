@@ -1,7 +1,7 @@
 /* globals _, wp, React */
 import { TwitterPicker } from 'react-color';
 const KirkiReactColorForm = ( props ) => {
-	const handleChangeComplete = (color) => {
+	const handleChangeComplete = ( color ) => {
 		wp.customize.control( props.customizerSetting.id ).setting.set( color.hex );
 	};
 
