@@ -6,15 +6,9 @@
 namespace Kirki_React_Color_Control;
 
 add_action( 'customize_controls_enqueue_scripts', function() {
-
-	$build_js = glob( __DIR__ . '/build/static/js/*.js' );
-	if ( 0 === count( $build_js ) ) {
-		wp_die( 'You must run <code>yarn build</code> in the <code>wp-content/plugins/control-react-color</code> directory because there is no built JS located in its <code>build/static/js</code> directory.' );
-	}
-
 	wp_enqueue_script(
 		'kirki-react-color-control',
-		plugin_dir_url( __FILE__ ) . 'build/static/js/' . basename( array_shift( $build_js ) ),
+		plugin_dir_url( __FILE__ ) . 'dist/main.js',
 		[ 'customize-controls', 'wp-element' ]
 	);
 } );
