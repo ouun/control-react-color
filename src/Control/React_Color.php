@@ -19,11 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Switch control (modified checkbox).
+ * React-color control.
  *
  * @since 1.0
  */
-class Checkbox_Switch extends Base {
+class React_Color extends Base {
 
 	/**
 	 * The control type.
