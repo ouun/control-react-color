@@ -2,7 +2,7 @@
 /**
  * Override field methods
  *
- * @package   kirki-framework/checkbox
+ * @package   kirki-framework/react-color
  * @copyright Copyright (c) 2019, Ari Stathopoulos (@aristath)
  * @license   https://opensource.org/licenses/MIT
  * @since     1.0
@@ -84,7 +84,7 @@ class React_Color extends Field {
 	public function filter_control_args( $args, $wp_customize ) {
 		if ( $args['settings'] === $this->args['settings'] ) {
 			$args         = parent::filter_control_args( $args, $wp_customize );
-			$args['type'] = 'kirki-checkbox';
+			$args['type'] = 'kirki-react-color';
 		}
 		return $args;
 	}
