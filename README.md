@@ -10,6 +10,16 @@ To install this package use `composer`:
 composer require kirki-framework/control-react-color
 ```
 
+**NOTE**:
+If you get errors with the package dependencies, please run the following first:
+```bash
+composer require kirki-framework/control-base:dev-master
+composer require kirki-framework/field:dev-master
+composer require kirki-framework/url-getter:dev-master
+```
+
+Until Kirki v4.0 is released some of these dependencies may not have a tag released, so in the meantime the above will allow you to install and use everything.
+
 ## Usage
 
 This package contains the control itself, as well as a simplified API for the WordPress Customizer, installed via the composer dependencies system.
