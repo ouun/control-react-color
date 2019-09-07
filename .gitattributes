@@ -12,6 +12,9 @@
 /webpack.config.js    export-ignore
 /.babelrc             export-ignore
 /src/*.js             export-ignore
+/composer.json        export-ignore
+/package-lock.json    export-ignore
+/README.md            export-ignore
 
 # Handle line endings.
 # See https://help.github.com/articles/dealing-with-line-endings/
