@@ -27,7 +27,7 @@ This package contains the control itself, as well as a simplified API for the Wo
 ### Using the simplified API
 
 ```php
-new \Kirki\Field\React_Color( [
+new \Kirki\Field\ReactColor( [
 	'settings'    => 'my_setting',
 	'label'       => esc_html__( 'My Color Control', 'textdomain' ),
 	'description' => esc_html__( 'A description here.', 'kirki' ),
@@ -60,7 +60,7 @@ add_action( 'customize_register', function( $wp_customize ) {
 	] );
 
     // Add control.
-	$wp_customize->add_control( new \Kirki\Control\React_Color( $wp_customize, 'my_setting', [
+	$wp_customize->add_control( new \Kirki\Control\ReactColor( $wp_customize, 'my_setting', [
 		'label'       => esc_html__( 'My Color Control', 'textdomain' ),
 		'description' => esc_html__( 'A description here.', 'kirki' ),
 		'section'     => 'title_tagline',
