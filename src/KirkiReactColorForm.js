@@ -43,8 +43,7 @@ const KirkiReactColorForm = ( props ) => {
 				width: '40px',
 				height: '2em',
 				'border-radius': '4px',
-				border: '1px solid rgba(0, 0, 0, .5)',
-				'box-shadow': 'inset 0 0 5px rgba(0, 0, 0, .5)',
+				border: '1px solid rgba(0,0,0,.2)',
 			},
 
 			summaryText: {
