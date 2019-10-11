@@ -17,7 +17,11 @@ import reactCSS from 'reactcss';
 const KirkiReactColorForm = ( props ) => {
 
 	const handleChangeComplete = ( color ) => {
-		wp.customize.control( props.customizerSetting.id ).setting.set( color.hex );
+		if ( 1 === color.rgb.a ) {
+			wp.customize.control( props.customizerSetting.id ).setting.set( color.hex );
+		} else {
+			wp.customize.control( props.customizerSetting.id ).setting.set( 'rgba(' + color.rgb.r + ',' + color.rgb.g + ',' + color.rgb.b + ',' + color.rgb.a + ')' );
+		}
 	};
 
 	const styles = reactCSS({
@@ -46,6 +50,7 @@ const KirkiReactColorForm = ( props ) => {
 			summaryText: {
 				color: '#a0a0a0',
 				padding: '0 12px',
+				'font-family': 'Menlo, Consolas, monaco, monospace'
 			}
 		},
 	});
@@ -54,7 +59,7 @@ const KirkiReactColorForm = ( props ) => {
 	let controlDescription = <span class="description customize-control-description" dangerouslySetInnerHTML={{ __html: props.description }}></span>;
 	let controlNotifications = <div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>;
 	let summary = <summary style={ styles.summary }><span style={ styles.summaryColor }></span><span style={ styles.summaryText }>{ props.value }</span></summary>
-	let isSummaryDefaultOpen = ( props.choices.summaryOpen ) ? 'true' : 'false';
+	let isSummaryDefaultOpen = ( true === props.choices.summaryOpen ) ? 'open="true"' : '';
 
 	switch ( props.choices.formComponent ) {
 		case 'AlphaPicker':
@@ -74,7 +79,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" open={ isSummaryDefaultOpen }>
+					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<BlockPicker
 							width="300"
@@ -89,7 +94,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" open={ isSummaryDefaultOpen }>
+					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<ChromePicker
 							width="300"
@@ -174,7 +179,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" open={ isSummaryDefaultOpen }>
+					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<PhotoshopPicker
 							width="300"
@@ -189,7 +194,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" open={ isSummaryDefaultOpen }>
+					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<SketchPicker
 							width="300"
@@ -232,7 +237,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" open={ isSummaryDefaultOpen }>
+					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<TwitterPicker
 							width="300"
