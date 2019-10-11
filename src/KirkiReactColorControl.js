@@ -65,11 +65,16 @@ const KirkiReactColorControl = wp.customize.Control.extend({
 			value={ value }
 			setNotificationContainer={ control.setNotificationContainer }
 			customizerSetting={ control.setting }
+			control={ control }
 		/>;
 		ReactDOM.render(
 			form,
 			control.container[0]
 		);
+
+		if ( false !== control.params.choices.allowCollapse ) {
+			control.container.addClass( 'allowCollapse colorPickerIsCollapsed' );
+		}
 	},
 
 	/**
@@ -106,7 +111,7 @@ const KirkiReactColorControl = wp.customize.Control.extend({
 		if ( wp.customize.Control.prototype.destroy ) {
 			wp.customize.Control.prototype.destroy.call( control );
 		}
-	},
+	}
 });
 
 export default KirkiReactColorControl;
