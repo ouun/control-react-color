@@ -1,17 +1,5 @@
 /* globals _, wp, React */
-import { AlphaPicker } from 'react-color';
-import { BlockPicker } from 'react-color';
-import { ChromePicker } from 'react-color';
-import { CirclePicker } from 'react-color';
-import { CompactPicker } from 'react-color';
-import { GithubPicker } from 'react-color';
-import { HuePicker } from 'react-color';
-import { MaterialPicker } from 'react-color';
-import { PhotoshopPicker } from 'react-color';
-import { SketchPicker } from 'react-color';
-import { SliderPicker } from 'react-color';
-import { SwatchesPicker } from 'react-color';
-import { TwitterPicker } from 'react-color';
+import { AlphaPicker, BlockPicker, ChromePicker, CirclePicker, CompactPicker, GithubPicker, HuePicker, MaterialPicker, PhotoshopPicker, SketchPicker, SliderPicker, SwatchesPicker, TwitterPicker } from 'react-color';
 import reactCSS from 'reactcss';
 
 const KirkiReactColorForm = ( props ) => {
