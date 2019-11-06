@@ -17,12 +17,12 @@ const KirkiReactColorForm = ( props ) => {
 			details: {
 				border: '1px solid rgba(0,0,0,.2)',
 				padding: '5px',
-				'border-radius': '5px'
+				borderRadius: '5px'
 			},
 
 			summary: {
 				display: 'flex',
-				'align-items': 'center',
+				alignItems: 'center',
 			},
 
 			summaryColor: {
@@ -30,20 +30,20 @@ const KirkiReactColorForm = ( props ) => {
 				display: 'block',
 				width: '40px',
 				height: '2em',
-				'border-radius': '4px',
+				borderRadius: '4px',
 				border: '1px solid rgba(0,0,0,.2)',
 			},
 
 			summaryText: {
 				color: '#a0a0a0',
 				padding: '0 12px',
-				'font-family': 'Menlo, Consolas, monaco, monospace'
+				fontFamily: 'Menlo, Consolas, monaco, monospace'
 			}
 		},
 	});
 
 	let controlLabel = <label className="customize-control-title">{ props.label }</label>;
-	let controlDescription = <span class="description customize-control-description" dangerouslySetInnerHTML={{ __html: props.description }}></span>;
+	let controlDescription = <span className="description customize-control-description" dangerouslySetInnerHTML={{ __html: props.description }}></span>;
 	let controlNotifications = <div className="customize-control-notifications-container" ref={ props.setNotificationContainer }></div>;
 	let summary = <summary style={ styles.summary }><span style={ styles.summaryColor }></span><span style={ styles.summaryText }>{ props.value }</span></summary>
 	let isSummaryDefaultOpen = ( true === props.choices.summaryOpen ) ? 'open="true"' : '';
@@ -53,7 +53,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<AlphaPicker
 							{ ...props.choices }
 							color={ props.value }
@@ -66,7 +66,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
+					<details style={ styles.details } className="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<BlockPicker
 							width="300"
@@ -81,7 +81,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
+					<details style={ styles.details } className="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<ChromePicker
 							width="300"
@@ -96,7 +96,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<CirclePicker
 							width="300"
 							{ ...props.choices }
@@ -110,7 +110,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<CompactPicker
 							width="300"
 							{ ...props.choices }
@@ -124,7 +124,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<GithubPicker
 							width="300"
 							{ ...props.choices }
@@ -138,7 +138,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<HuePicker
 							width="300"
 							{ ...props.choices }
@@ -152,7 +152,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<MaterialPicker
 							width="300"
 							{ ...props.choices }
@@ -166,7 +166,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
+					<details style={ styles.details } className="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<PhotoshopPicker
 							width="300"
@@ -181,7 +181,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
+					<details style={ styles.details } className="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<SketchPicker
 							width="300"
@@ -196,7 +196,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<SliderPicker
 							width="300"
 							{ ...props.choices }
@@ -210,7 +210,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<div class="colorPickerContainer">
+					<div className="colorPickerContainer">
 						<SwatchesPicker
 							width="300"
 							{ ...props.choices }
@@ -224,7 +224,7 @@ const KirkiReactColorForm = ( props ) => {
 			return (
 				<div>
 					{ controlLabel }{ controlDescription }{ controlNotifications }
-					<details style={ styles.details } class="colorPickerContainer" { ...isSummaryDefaultOpen }>
+					<details style={ styles.details } className="colorPickerContainer" { ...isSummaryDefaultOpen }>
 						{ summary }
 						<TwitterPicker
 							width="300"
